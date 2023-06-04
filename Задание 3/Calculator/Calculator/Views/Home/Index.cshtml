@@ -1,0 +1,22 @@
+﻿@model Calculator.Models.CalculatorModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="Index"> 
+    <div class="text-center">
+        <h1 class="display-4">Веб Калькулятор</h1>
+        <p><label>Первое значение</label></p>
+        <p><input type="number" asp-for="FirstValue" /></p>
+        <p><label>Второе значение</label></p>
+        <p><input type="number" asp-for="SecondValue" /></p>
+
+        <p><input type="submit" value="+" asp-for="Action" /></p>
+        <p><input type="submit" value="-" asp-for="Action" /></p>
+        <p><input type="submit" value="*" asp-for="Action" /></p>
+        <p><input type="submit" value="/" asp-for="Action" /></p>
+
+        <p><label>Результат</label></p>
+        <p><input type="text" asp-for="@ViewData["ResultValue"]" /></p>
+    </div>
+</form>
